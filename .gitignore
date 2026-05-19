@@ -1,0 +1,16 @@
+# Skompilowane pliki C++
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.out
+*.app
+
+# Środowiska programistyczne i systemy budowania
+.vscode/
+.idea/
+build/
+out/
+CMakeCache.txt
+CMakeFiles/

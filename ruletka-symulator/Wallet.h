@@ -18,25 +18,25 @@ public:
      * @brief Konstruktor inicjalizujący portfel.
      * @param initial_balance Początkowy stan konta.
      */
-    Wallet(double initial_balance = 0.0) : balance(initial_balance) {}
+    Wallet(double initial_balance = 0.0);
 
     /**
      * @brief Dodaje środki do portfela.
      * @param amount Kwota do dodania.
      */
-    void addFunds(double amount) {}
+    void addFunds(double amount);
 
     /**
      * @brief Pobiera z portfela środki na zakład.
      * @param amount Kwota do pobrania.
      * @return true jeśli wystarczy środków, false w przeciwnym razie.
      */
-    bool deductFunds(double amount) { return false; }
+    bool deductFunds(double amount);
 
     /**
      * @brief Zwraca obecny stan konta.
      * @return Aktualny balans.
      */
-    double getBalance() const { return balance; }
+    double getBalance() const;
 };
 #endif //FOLDERNPGWOJCIECHKRAWCZYK_WALLET_H

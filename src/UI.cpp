@@ -46,3 +46,21 @@ std::string UI::getUserInput() {
 void UI::showMessage(const std::string& message) {
     std::cout << message << std::endl;
 }
+
+void UI::showStatistics(const Statistics& stats) {
+    std::cout << "\n============================================\n";
+    std::cout << "|            STATYSTYKI GRACZA             |\n";
+    std::cout << "============================================\n";
+    std::cout << " Rozegrane rundy: " << stats.getRoundsPlayed() << "\n";
+    std::cout << " Wygrane zaklady: " << stats.getBetsWon() << "\n";
+    std::cout << " Przegrane zaklady: " << stats.getBetsLost() << "\n";
+    std::cout << " Laczna postawiona kwota: " << stats.getTotalWagered() << " zetonow\n";
+    std::cout << " Laczna wygrana kwota: " << stats.getTotalWon() << " zetonow\n";
+    std::cout << " Najwyzsza jednorazowa wygrana: " << stats.getHighestWin() << " zetonow\n";
+
+    double net = stats.getTotalWon() - stats.getTotalWagered();
+    std::cout << " Bilans calkowity (Netto): ";
+    if (net > 0) std::cout << "+" << net << " zetonow\n";
+    else std::cout << net << " zetonow\n";
+    std::cout << "============================================\n";
+}

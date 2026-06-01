@@ -3,6 +3,7 @@
 #include "Wheel.h"
 #include "Wallet.h"
 #include "BetManager.h"
+#include "Statistics.h"
 
 class GameManager {
 private:
@@ -10,6 +11,8 @@ private:
     Wheel wheel;
     Wallet wallet;
     BetManager betManager;
+    Statistics stats;
+
     void playRound();
 
 public:

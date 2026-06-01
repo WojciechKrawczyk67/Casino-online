@@ -15,7 +15,7 @@ void GameManager::run() {
                 ui.showMessage("\nAktualny stan konta: " + std::to_string(wallet.getBalance()) + " zetonow.");
                 break;
             case 3:
-                ui.showMessage("\nStatystyki: Modul w budowie.");
+                ui.showStatistics(stats);
                 break;
             case 4:
                 ui.showMessage("\nDziekujemy za gre!");
@@ -55,6 +55,8 @@ void GameManager::playRound() {
         return;
     }
 
+    stats.recordBet(amount);
+
     if (betType == 1) {
         ui.showMessage("Wybierz: 1 - Czerwone, 0 - Czarne");
         bool isRed = (std::stoi(ui.getUserInput()) == 1);
@@ -77,12 +79,16 @@ void GameManager::playRound() {
     int winningNumber = wheel.spin();
     ui.showMessage("Wylosowano numer: " + std::to_string(winningNumber));
 
+    stats.addRound();
+
     double winnings = betManager.resolveAllBets(winningNumber);
 
     if (winnings > 0) {
         ui.showMessage("Gratulacje! Wygrywasz: " + std::to_string(winnings) + " zetonow.");
         wallet.addFunds(winnings);
+        stats.recordWin(winnings);
     } else {
         ui.showMessage("Niestety, tym razem przegrywasz.");
+        stats.recordLoss();
     }
 }

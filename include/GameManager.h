@@ -14,6 +14,7 @@ private:
     Statistics stats;
 
     void playRound();
+    void bettingPhase();
 
 public:
     GameManager();

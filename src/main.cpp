@@ -1,11 +1,14 @@
 #include "GameManager.h"
 #include <cstdlib>
+#include <ctime>
 
 int main() {
+    // Inicjalizacja ziarna dla losowości animacji
+    srand(static_cast<unsigned int>(time(nullptr)));
+
     GameManager game;
     game.run();
 
-    // Zatrzymuje okno konsoli przed natychmiastowym zamknięciem po zakończeniu gry
     system("pause");
     return 0;
 }

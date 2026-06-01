@@ -3,9 +3,7 @@ Stworzenie ruletki online w szeroko pojętych celach rekreacyjnych
 
 Języki programowania: C++
 
-System kontroli wersji: Git 
-
-Frameworki testowe: Google Test
+System kontroli wersji: Git
 
 Skład zespołu i ich odpowiedialność w projekcie
 
@@ -13,14 +11,23 @@ Struktura Katalogów:
 
 Ruletka online
 │
-├── .gitignore(Wojciech Paweł Krawczyk)           
+
+├── .gitignore(Wojciech Jan Krawczyk)
+
 ├── README.md(Wojciech Paweł Krawczyk)
+
 ├── STANDUP.md (Wojciech Jan Krawczyk)
-├── src/           
-│   ├── interface(Rafał Czajka)
-│   ├── main.cpp(Rafał Czajka, Szymon Krenz, Maciej Kołtek)   
-│   └──  core/(Szymon Krenz, Maciej Kołtek)               
-│
-└── tests/             
-    ├── unit(Wojciech Paweł Krawczyk)               
-    └── integration(Wojciech Jan Krawczyk)        
+
+├── main.cpp (Wojciech Jan Krawczyk)
+
+├── Wheel.h (Szymon Krenz)
+
+├── Wallet.h (Maciej Kołtek)
+
+├── UI.h (Rafał Czajka)
+
+├── GameManager.h (wszyscy)
+
+├── BetManager.h (wszyscy)
+
+├── Slejenie (Wojciech Jan Krawczyk)

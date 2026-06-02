@@ -10,6 +10,7 @@ Skład zespołu i ich odpowiedialność w projekcie
 Struktura Katalogów:
 
 Ruletka online
+
 │
 
 ├── .gitignore(Wojciech Jan Krawczyk)
